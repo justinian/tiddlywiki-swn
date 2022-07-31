@@ -1,18 +1,18 @@
-title: $:/plugins/benwebber/dnd/templates/dnd.spell
+title: $:/plugins/justinian/swn/templates/swn.spell
 
 \define field-spell()
 
 <$macrocall
-  $name="dnd.spellblock"
-  level={{!!dnd.spell.level}}
-  school={{!!dnd.spell.school}}
-  cast={{!!dnd.spell.cast}}
-  ritual={{!!dnd.spell.ritual}}
-  range={{!!dnd.spell.range}}
-  verbal={{!!dnd.spell.verbal}}
-  somatic={{!!dnd.spell.somatic}}
-  material={{!!dnd.spell.material}}
-  duration={{!!dnd.spell.duration}}
+  $name="swn.spellblock"
+  level={{!!swn.spell.level}}
+  school={{!!swn.spell.school}}
+  cast={{!!swn.spell.cast}}
+  ritual={{!!swn.spell.ritual}}
+  range={{!!swn.spell.range}}
+  verbal={{!!swn.spell.verbal}}
+  somatic={{!!swn.spell.somatic}}
+  material={{!!swn.spell.material}}
+  duration={{!!swn.spell.duration}}
 />
 
 \end
@@ -20,7 +20,7 @@ title: $:/plugins/benwebber/dnd/templates/dnd.spell
 \define data-spell()
 
 <$macrocall
-  $name="dnd.spellblock"
+  $name="swn.spellblock"
   level={{##level}}
   school={{##school}}
   cast={{##cast}}

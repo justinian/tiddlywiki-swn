@@ -1,6 +1,6 @@
-title: $:/plugins/benwebber/dnd/macros/creature
+title: $:/plugins/justinian/swn/macros/creature
 tags: $:/tags/Macro
 
-\define dnd.creature()
-{{||$:/plugins/benwebber/dnd/templates/dnd.statblock}}
+\define swn.creature()
+{{||$:/plugins/justinian/swn/templates/swn.statblock}}
 \end

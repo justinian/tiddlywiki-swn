@@ -1,14 +1,24 @@
-title: $:/plugins/benwebber/dnd/templates/dnd.character
+title: $:/plugins/justinian/swn/templates/swn.character
 
 \define field-character()
 
 <$macrocall
-  $name="dnd.characterblock"
-  class={{!!dnd.character.class}}
-  race={{!!dnd.character.race}}
-  alignment={{!!dnd.character.alignment}}
-  languages={{!!dnd.character.languages}}
-  factions={{!!dnd.character.factions}}
+  $name="swn.characterblock"
+  class={{!!swn.character.class}}
+  race={{!!swn.character.race}}
+  str={{!!swn.character.str}}
+  dex={{!!swn.character.dex}}
+  con={{!!swn.character.con}}
+  int={{!!swn.character.int}}
+  wis={{!!swn.character.wis}}
+  cha={{!!swn.character.cha}}
+  ac={{!!swn.creature.ac}}
+  hp={{!!swn.creature.hp}}
+  saves={{!!swn.creature.saves}}
+  move={{!!swn.creature.move}}
+  skills={{!!swn.creature.skills}}
+  languages={{!!swn.character.languages}}
+  factions={{!!swn.character.factions}}
 />
 
 \end
@@ -16,10 +26,20 @@ title: $:/plugins/benwebber/dnd/templates/dnd.character
 \define data-character()
 
 <$macrocall
-  $name="dnd.characterblock"
+  $name="swn.characterblock"
   class={{##class}}
   race={{##race}}
-  alignment={{##alignment}}
+  str={{##str}}
+  dex={{##dex}}
+  con={{##con}}
+  int={{##int}}
+  wis={{##wis}}
+  cha={{##cha}}
+  ac={{##ac}}
+  hp={{##hp}}
+  saves={{##saves}}
+  move={{##move}}
+  skills={{##skills}}
   languages={{##languages}}
   factions={{##factions}}
 />

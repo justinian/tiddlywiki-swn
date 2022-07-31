@@ -1,0 +1,17 @@
+title: Pirate
+tags: Creatures
+swn.creature.tags: any race
+swn.creature.ac: 14 (reinforced jacket)
+swn.creature.hd: 2
+swn.creature.move: 30'
+swn.creature.skills: +2
+swn.creature.languages: any two languages
+
+!! Actions
+
+<<swn.attack name:"Cutlass" type:melee bonus:"+3" shock:"3/20" damage:"1d8+1">>
+
+!! Special abilities
+
+//''Close Combatant.''// The pirate ignores shock damage from melee assailants,
+//even when unarmored.

@@ -1,6 +1,6 @@
-title: $:/plugins/benwebber/dnd/macros/spell
+title: $:/plugins/justinian/swn/macros/spell
 tags: $:/tags/Macro
 
-\define dnd.spell()
-{{||$:/plugins/benwebber/dnd/templates/dnd.spell}}
+\define swn.spell()
+{{||$:/plugins/justinian/swn/templates/swn.spell}}
 \end

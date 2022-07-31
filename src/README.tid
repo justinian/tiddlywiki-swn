@@ -1,18 +1,18 @@
-title: $:/plugins/benwebber/dnd/README
+title: $:/plugins/justinian/swn/README
 
 \define .tool(_)
 <$vars tv-config-toolbar-text="yes" tv-config-toolbar-class="">
-<$transclude tiddler="""$:/plugins/benwebber/dnd/ui/Buttons/$_$""" />
+<$transclude tiddler="""$:/plugins/justinian/swn/ui/Buttons/$_$""" />
 </$vars>
 \end
 
 \define .noop-tool(name, caption)
-<$transclude tiddler="""$:/plugins/benwebber/dnd/ui/Buttons/$_$""" />
-''<<dnd._lingo Buttons/$caption$/Text>>'' (<span class="dnd-doc-icon">{{$:/plugins/benwebber/dnd/images/$name$}}</span>)
+<$transclude tiddler="""$:/plugins/justinian/swn/ui/Buttons/$_$""" />
+''<<swn._lingo Buttons/$caption$/Text>>'' (<span class="swn-doc-icon">{{$:/plugins/justinian/swn/images/$name$}}</span>)
 \end
 
 \define .tag(_)
-<$macrocall $name="tag" tag={{$:/plugins/benwebber/dnd/config/Tags/$_$}}/>
+<$macrocall $name="tag" tag={{$:/plugins/justinian/swn/config/Tags/$_$}}/>
 \end
 
 \define .example(code)
@@ -25,17 +25,20 @@ $code$
 <tr><td>`$code$`</td><td>$code$</td></tr>
 \end
 
-Manage //Dungeons & Dragons// campaigns with [[TiddlyWiki|https://tiddlywiki.com]].
+Manage //Stars Without Number// or //Worlds Without Number// campaigns with
+[[TiddlyWiki|https://tiddlywiki.com]]. (Based on the awesome
+[[dnd plugin|https://benwebber.github.io/tiddlywiki-dnd]] by Ben Webber.)
 
 ! Install
 
-[[Manually install|https://tiddlywiki.com/#Manually%20installing%20a%20plugin]] the plugin by dragging this link to your ~TiddlyWiki:
+[[Manually install|https://tiddlywiki.com/#Manually%20installing%20a%20plugin]]
+the plugin by dragging this link to your ~TiddlyWiki:
 
 <$list
-  filter="[<transclusion>prefix[{$:/plugins/benwebber/dnd/README|$:/plugins/benwebber/dnd/README|||}]]"
-  emptyMessage="[[$:/plugins/benwebber/dnd]]"
+  filter="[<transclusion>prefix[{$:/plugins/justinian/swn/README|$:/plugins/justinian/swn/README|||}]]"
+  emptyMessage="[[$:/plugins/justinian/swn]]"
 >
-{{$:/plugins/benwebber/dnd||$:/core/ui/Components/plugin-info}}
+{{$:/plugins/justinian/swn||$:/core/ui/Components/plugin-info}}
 </$list>
 
 Then save and refresh your ~TiddlyWiki.
@@ -44,21 +47,24 @@ Then save and refresh your ~TiddlyWiki.
 
 !! Create a new character
 
-Enable the <<.tool new-character>> tool to create new character tiddlers with a single click.
+Enable the <<.tool new-character>> tool to create new character tiddlers with a
+single click.
 
-See [[Lord Wilmore]] as an example.
+See [[Captain Wilmore]] as an example.
 
 !! Create a new creature
 
-Enable the <<.tool new-creature>> tool to create new creature tiddlers with a single click.
+Enable the <<.tool new-creature>> tool to create new creature tiddlers with a
+single click.
 
-See [[Goblin]] as an example.
+See [[Unnatural Swarm]] as an example.
 
 !! Create a new spell
 
-Enable the <<.tool new-spell>> tool to create new spell tiddlers with a single click.
+Enable the <<.tool new-spell>> tool to create new spell tiddlers with a single
+click.
 
-See [[Alarm]] as an example.
+See [[Apprehending the Arcane Form]] as an example.
 
 !! Notes
 
@@ -66,170 +72,133 @@ You can add notes to non-system tiddlers using the <<.noop-tool add-note AddNote
 Notes exist as separate tiddlers associated with the main tiddler (using the note tiddler's `list` field).
 A tiddler can have more than one note.
 
-See [[Lord Wilmore]] as an example.
+See [[Captain Wilmore]] as an example.
 
 ! Player Edition
 
-Use the <<.tool export-player-edition>> tool to export a filtered version of your wiki to share with players.
-The player edition ''only includes'' tiddlers tagged <<.tag PlayerEdition>> and the plugin itself.
+Use the <<.tool export-player-edition>> tool to export a filtered version of
+your wiki to share with players. The player edition ''only includes'' tiddlers
+tagged <<.tag PlayerEdition>> and the plugin itself.
 
-Notes associated with those tiddlers ''will not'' appear in the player edition by default. You must tag them separately.
-This makes notes a great way to add private information to otherwise public tiddlers.
+Notes associated with those tiddlers ''will not'' appear in the player edition
+by default. You must tag them separately. This makes notes a great way to add
+private information to otherwise public tiddlers.
 
-You can easily publish or hide a tiddler using the <<.noop-tool public PlayerEdition>> tool.
+You can easily publish or hide a tiddler using the
+<<.noop-tool public PlayerEdition>> tool.
 
 ! Configuration
 
-Navigate to the plugin info tiddler ([[$:/plugins/benwebber/dnd]]), then go to the ''Settings'' tab.
+Navigate to the plugin info tiddler ([[$:/plugins/justinian/swn]]), then go to
+the ''Settings'' tab.
 
 ! Macros
 
-!! `dnd.ability`
+!! `swn.ability`
 
-Renders an [[ability score|https://roll20.net/compendium/dnd5e/Ability%20Scores]] with its calculated modifier.
+Renders an [[ability score|https://roll20.net/compendium/swn5e/Ability%20Scores]]
+with its calculated modifier.
 
 <table>
   <tr>
     <th>Call</th>
     <th>Output</th>
   </tr>
-  <$macrocall $name=".call-row" code="""<<dnd.ability 8>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.ability 10>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.ability 15>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.ability 20>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.ability 6>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.ability 10>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.ability 15>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.ability 18>>"""/>
 </table>
 
-!! `dnd.attack`
+!! `swn.attack`
 
 Renders creature attacks.
 
-!!! Attack and damage types
+!!! Attack types
 
-Attack types and damage types are localized strings.
+Attack types are localized strings.
 
 To specify an attack's type, use the following values:
 
 |! Value|! Attack Type|
-|`melee`|<<dnd._lingo StatBlock/Action/Melee>>|
-|`ranged`|<<dnd._lingo StatBlock/Action/Ranged>>|
-|`both`|<<dnd._lingo StatBlock/Action/MeleeOrRanged>>|
-
-Similarly, to specify an attack's damage type, use its English name.
-
-|! Value|! Damage Type|
-|`acid`|<<dnd._lingo Damage/Type/Acid>>|
-|`bludgeoning`|<<dnd._lingo Damage/Type/Bludgeoning>>|
-|`cold`|<<dnd._lingo Damage/Type/Cold>>|
-|`fire`|<<dnd._lingo Damage/Type/Fire>>|
-|`force`|<<dnd._lingo Damage/Type/Force>>|
-|`lightning`|<<dnd._lingo Damage/Type/Lightning>>|
-|`necrotic`|<<dnd._lingo Damage/Type/Necrotic>>|
-|`piercing`|<<dnd._lingo Damage/Type/Piercing>>|
-|`poison`|<<dnd._lingo Damage/Type/Poison>>|
-|`psychic`|<<dnd._lingo Damage/Type/Psychic>>|
-|`radiant`|<<dnd._lingo Damage/Type/Radiant>>|
-|`slashing`|<<dnd._lingo Damage/Type/Slashing>>|
-|`thunder`|<<dnd._lingo Damage/Type/Thunder>>|
+|`melee`|<<swn._lingo StatBlock/Action/Melee>>|
+|`ranged`|<<swn._lingo StatBlock/Action/Ranged>>|
+|`both`|<<swn._lingo StatBlock/Action/MeleeOrRanged>>|
 
 !!! Simple melee, ranged, or melee and ranged attacks
 
-<$macrocall $name=".example" code="""<<dnd.attack
+<$macrocall $name=".example" code="""<<swn.attack
   name:"Rapier"
   type:melee
   bonus:"+3"
-  reach:"5 ft."
+  shock:"2/13"
   damage:"1d8+1"
-  damageType:piercing
 >>"""/>
 
-<$macrocall $name=".example" code="""<<dnd.attack
-  name:"Heavy Crossbow"
+<$macrocall $name=".example" code="""<<swn.attack
+  name:"Crossbow"
   type:ranged
   bonus:"+2"
-  range:"100/400 ft."
+  range:"100/300 ft."
   damage:"1d10"
-  damageType:piercing
 >>"""/>
 
-<$macrocall $name=".example" code="""<<dnd.attack
+<$macrocall $name=".example" code="""<<swn.attack
   name:"Dagger"
   type:both
   bonus:"+5"
-  reach:"5 ft."
+  shock:"1/13"
   range:"20/60 ft."
   damage:"1d4+3"
-  damageType:piercing
 >>"""/>
 
 !!! Attacks with extra damage
 
-<$macrocall $name=".example" code="""<<dnd.attack
+<$macrocall $name=".example" code="""<<swn.attack
   name:"Greatsword"
   type:melee
   bonus:"+15"
-  reach:"5 ft."
+  shock:"2/15"
   damage:"4d6+8"
-  damageType:"slashing"
   extraDamage:"6d8"
-  extraDamageType:radiant
 >>"""/>
 
 !!! Attacks with conditional damage
 
-<$macrocall $name=".example" code="""<<dnd.attack
+<$macrocall $name=".example" code="""<<swn.attack
   name:"Longsword"
   type:melee
   bonus:"+5"
-  reach:"5 ft."
+  shock:"1/15"
   damage:"1d8+3"
-  damageType:slashing
   condDamage:"1d10+3"
-  condDamageType:slashing
   when:"if used with two hands"
 >>"""/>
 
-<$macrocall $name=".example" code="""<<dnd.attack
+<$macrocall $name=".example" code="""<<swn.attack
   name:"Longsword"
   type:melee
   bonus:"+5"
-  reach:"5 ft."
+  shock:"1/15"
   damage:"1d8+3"
-  damageType:slashing
   extraDamage:"1d4"
-  extraDamage:fire
   condDamage:"1d10+3"
-  condDamageType:slashing
   extraCondDamage:"1d4"
-  extraCondDamage:fire
   when:"if used with two hands"
 >>"""/>
 
 !!! Attacks with extra effects
 
-<$macrocall $name=".example" code="""<<dnd.attack
-  name:"Light Crossbow"
+<$macrocall $name=".example" code="""<<swn.attack
+  name:"Crossbow"
   type:ranged
   bonus:"+6"
-  range:"80/320 ft."
-  damage:"1d8+3"
-  damageType:piercing
-  effect:"and the target must make a DC 15 Constitution saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one"
+  range:"100/300 ft."
+  damage:"1d10+3"
+  effect:"and the target must make a DC 15 physical saving throw, taking 24 (7d6) poison damage on a failed save, or half as much damage on a successful one"
 >>"""/>
 
-!!! Attacks with special targets
-
-<$macrocall $name=".example" code="""<<dnd.attack
-  name:"Dagger"
-  type:both
-  bonus:"+4"
-  reach:"5 ft."
-  range:"20/60 ft."
-  target:"one creature"
-  damage:"1d4+2"
-  damageType:piercing
->>"""/>
-
-!! `dnd.average`
+!! `swn.average`
 
 Calculates the average result of the specified roll.
 
@@ -238,24 +207,25 @@ Calculates the average result of the specified roll.
     <th>Call</th>
     <th>Output</th>
   </tr>
-  <$macrocall $name=".call-row" code="""<<dnd.average d8>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.average 2d8>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.average 2d8+2>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.average 2d8-2>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.average "2d8 + 2">>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.average "2d8 - 2">>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.average d8>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.average 2d8>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.average 2d8+2>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.average 2d8-2>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.average "2d8 + 2">>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.average "2d8 - 2">>"""/>
 </table>
 
-!! `dnd.character`
+!! `swn.character`
 
 Helper macro to create a standalone character tiddler.
 
-This macro uses the [[dnd.character|$:/plugins/benwebber/dnd/templates/dnd.character]] template and stores the character's attributes as tiddler fields.
-Automatically links class and race tiddlers if they exist.
+This macro uses the [[swn.character|$:/plugins/justinian/swn/templates/swn.character]]
+template and stores the character's attributes as tiddler fields. Automatically links
+class and race tiddlers if they exist.
 
 It is ''not'' necessary to use this macro if you use the automatic view template.
 
-!! `dnd.check`
+!! `swn.check`
 
 Typeset an ability check, optionally including a skill and/or DC.
 This macro is not case-sensitive.
@@ -263,199 +233,177 @@ This macro is not case-sensitive.
 The macro matches English abbreviations of the ability names:
 
 | Ability | Code |h
-|<<dnd._lingo Ability/STR>> |`str` |
-|<<dnd._lingo Ability/DEX>> |`dex` |
-|<<dnd._lingo Ability/CON>> |`con` |
-|<<dnd._lingo Ability/INT>> |`int` |
-|<<dnd._lingo Ability/WIS>> |`wis` |
-|<<dnd._lingo Ability/CHA>> |`cha` |
+|<<swn._lingo Ability/STR>> |`str` |
+|<<swn._lingo Ability/DEX>> |`dex` |
+|<<swn._lingo Ability/CON>> |`con` |
+|<<swn._lingo Ability/INT>> |`int` |
+|<<swn._lingo Ability/WIS>> |`wis` |
+|<<swn._lingo Ability/CHA>> |`cha` |
 
-It matches English skill names by least ambiguous prefix.
-For example, `perc`, `perf`, and `pers` for Perception, Performance, and Persuasion, respectively.
+It matches English skill names by least ambiguous prefix. For example, `perc`,
+`perf`, and `pers` for Perception, Performance, and Persuasion, respectively.
 
 | Skill | Least Ambiguous Prefix |h
-|<<dnd._lingo Skill/Acrobatics>> |`ac` |
-|<<dnd._lingo Skill/AnimalHandling>> |`an` |
-|<<dnd._lingo Skill/Arcana>> |`ar` |
-|<<dnd._lingo Skill/Athletics>> |`at` |
-|<<dnd._lingo Skill/Deception>> |`d` |
-|<<dnd._lingo Skill/History>> |`h` |
-|<<dnd._lingo Skill/Insight>> |`ins` |
-|<<dnd._lingo Skill/Intimidation>> |`int` |
-|<<dnd._lingo Skill/Investigation>> |`inv` |
-|<<dnd._lingo Skill/Medicine>> |`m` |
-|<<dnd._lingo Skill/Nature>> |`n` |
-|<<dnd._lingo Skill/Perception>> |`perc` |
-|<<dnd._lingo Skill/Performance>> |`perf` |
-|<<dnd._lingo Skill/Persuasion>> |`pers` |
-|<<dnd._lingo Skill/Religion>> |`r` |
-|<<dnd._lingo Skill/SleightOfHand>> |`sl` |
-|<<dnd._lingo Skill/Stealth>> |`st` |
-|<<dnd._lingo Skill/Survival>> |`su` |
+|<<swn._lingo Skill/Administer>> |`adm` |
+|<<swn._lingo Skill/Connect>> | `con` |
+|<<swn._lingo Skill/Convince>> | `cnv` |
+|<<swn._lingo Skill/Craft>> | `crf` |
+|<<swn._lingo Skill/Exert>> | `exr` |
+|<<swn._lingo Skill/Fix>> | `fix` |
+|<<swn._lingo Skill/Heal>> | `hea` |
+|<<swn._lingo Skill/Know>> | `kno` |
+|<<swn._lingo Skill/Lead>> | `lea` |
+|<<swn._lingo Skill/Magic>> | `mag` |
+|<<swn._lingo Skill/Notice>> | `not` |
+|<<swn._lingo Skill/Perform>> | `per` |
+|<<swn._lingo Skill/Pilot>> | `pil` |
+|<<swn._lingo Skill/Pray>> | `pry` |
+|<<swn._lingo Skill/Program>> | `prg` |
+|<<swn._lingo Skill/Punch>> | `pun` |
+|<<swn._lingo Skill/Ride>> | `rid` |
+|<<swn._lingo Skill/Sail>> | `sai` |
+|<<swn._lingo Skill/Shoot>> | `sht` |
+|<<swn._lingo Skill/Sneak>> | `snk` |
+|<<swn._lingo Skill/Stab>> | `stb` |
+|<<swn._lingo Skill/Survive>> | `srv` |
+|<<swn._lingo Skill/Talk>> | `tlk` |
+|<<swn._lingo Skill/Trade>> | `trd` |
+|<<swn._lingo Skill/Work>> | `wrk` |
 
-You can also use the full skill name, such as `<<dnd.check dex acrobatics>>` or `<<dnd.check wis "Animal Handling">>`.
+You can also use the full skill name, such as `<<swn.check dex sneak>>`.
 
 <table>
   <tr>
     <th>Call</th>
     <th>Output</th>
   </tr>
-  <$macrocall $name=".call-row" code="""<<dnd.check int>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check int dc:15>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check int inv>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check int inv 18>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check cha perf>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check cha pers>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check wis su>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check wis surv>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check wis survival>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check wis animal>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.check wis "Animal Handling">>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check int>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check int dc:15>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check int kno>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check int kno 18>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check cha per>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check cha tlk>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check wis su>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check wis surv>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check wis survive>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.check int Program>>"""/>
 </table>
 
-Finally, the macro supports unusual ability and skill combinations, such as asking a player to make a <<dnd.check str int>> check (`<<dnd.check str int>>`).
+Finally, the macro supports unusual ability and skill combinations, such as
+asking a player to make a <<swn.check str int>> check (`<<swn.check str
+int>>`).
 
-!! `dnd.creature`
+!! `swn.creature`
 
 Helper macro to create a standalone creature tiddler.
 
-This macro uses the [[dnd.statblock|$:/plugins/benwebber/dnd/templates/dnd.statblock]] template and stores the creature's attributes as tiddler fields.
+This macro uses the [[swn.statblock|$:/plugins/justinian/swn/templates/swn.statblock]]
+template and stores the creature's attributes as tiddler fields.
 
-It is ''not'' necessary to use this macro if you use the automatic view template.
+It is ''not'' necessary to use this macro if you use the automatic view
+template.
 
-!! `dnd.modifier`
+!! `swn.modifier`
 
 Calculates the modifier for a given ability score.
 
-Generally you will want to use `dnd.ability` instead.
+Generally you will want to use `swn.ability` instead.
 
 <table>
   <tr>
     <th>Call</th>
     <th>Output</th>
   </tr>
-  <$macrocall $name=".call-row" code="""<<dnd.modifier 8>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.modifier 10>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.modifier 15>>"""/>
-  <$macrocall $name=".call-row" code="""<<dnd.modifier 20>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.modifier 6>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.modifier 10>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.modifier 15>>"""/>
+  <$macrocall $name=".call-row" code="""<<swn.modifier 18>>"""/>
 </table>
 
-!! `dnd.spell`
+!! `swn.spell`
 
 Helper macro to create a standalone spell tiddler.
 
-This macro uses the [[dnd.spell|$:/plugins/benwebber/dnd/templates/dnd.spell]] template and stores the spell's attributes as tiddler fields.
+This macro uses the [[swn.spell|$:/plugins/justinian/swn/templates/swn.spell]]
+template and stores the spell's attributes as tiddler fields.
 
 It is ''not'' necessary to use this macro if you use the automatic view template.
 
-!! `dnd.statblock`
+!! `swn.statblock`
 
-Render a creature stat block.
-This is a low-level macro.
-You may want to use the automatic view template instead (see below).
+Render a creature stat block. This is a low-level macro. You may want to use
+the automatic view template instead (see below).
 
 !!! Notes
 
-* Ability scores default to <<dnd.ability 10>>.
-* If not set, `language` defaults to `---`.
+* Ability scores default to <<swn.ability 10>>.
 
 ```
-<<dnd.statblock
-size: small
-type: humanoid
+<<swn.statblock
 tags: goblinoid
-alignment: "neutral evil"
 ac: "15 (leather armor, shield)"
-hp: 2d6
+hd: 1
 speed: "30 ft."
 str: 8
 dex: 14
 wis: 8
 cha: 8
-skills: "Stealth +6"
-senses: "darkvision 60 ft., passive Perception 9"
+skills: "+1"
+senses: "darkvision 60 ft."
 languages: "Common, Goblin"
-challenge: 1/4
 >>
 ```
 
-<$reveal type="nomatch" state="!!dnd.statblock.state" text="show">
+<$reveal type="nomatch" state="!!swn.statblock.state" text="show">
 
-<$button set="!!dnd.statblock.state" setTo="show">Show</$button>
+<$button set="!!swn.statblock.state" setTo="show">Show</$button>
 
 </$reveal>
 
-<$reveal type="match" state="!!dnd.statblock.state" text="show">
+<$reveal type="match" state="!!swn.statblock.state" text="show">
 
-<$button set="!!dnd.statblock.state" setTo="hide">Hide</$button>
+<$button set="!!swn.statblock.state" setTo="hide">Hide</$button>
 
-<<dnd.statblock
-size: small
-type: humanoid
+<<swn.statblock
 tags: goblinoid
-alignment: "neutral evil"
 ac: "15 (leather armor, shield)"
-hp: 2d6
+hd: 1
 speed: "30 ft."
 str: 8
 dex: 14
 wis: 8
 cha: 8
-skills: "Stealth +6"
-senses: "darkvision 60 ft., passive Perception 9"
+skills: "+1"
+senses: "darkvision 60 ft."
 languages: "Common, Goblin"
-challenge: 1/4
 >>
 
 </$reveal>
-
-!! `dnd.xp`
-
-Renders experience points (XP) for the given challenge rating (CR).
-
-!!! Standard challenge ratings
-
-<table>
-  <tr>
-    <th>Call</th>
-    <th>Output</th>
-  </tr>
-  <$macrocall $name=".call-row" code="""<<dnd.xp 0>>""" />
-  <$macrocall $name=".call-row" code="""<<dnd.xp 0 10>>""" />
-  <$macrocall $name=".call-row" code="""<<dnd.xp 1/2>>""" />
-  <$macrocall $name=".call-row" code="""<<dnd.xp 5>>""" />
-</table>
-
-!!! Custom challenge ratings
-
-<table>
-  <tr>
-    <th>Call</th>
-    <th>Output</th>
-  </tr>
-  <$macrocall $name=".call-row" code="""<<dnd.xp 40>>""" />
-  <$macrocall $name=".call-row" code="""<<dnd.xp 40 255555>>""" />
-  <$macrocall $name=".call-row" code="""<<dnd.xp unknown>>""" />
-</table>
 
 ! View Templates
 
-~TiddlyWiki view templates automatically inject content into tiddlers that match certain criteria.
-This plugin includes view templates that style all tiddlers with certain tags.
+~TiddlyWiki view templates automatically inject content into tiddlers that
+match certain criteria. This plugin includes view templates that style all
+tiddlers with certain tags.
 
 | Template | Tag | Description | Example |h
-|`character` |<<.tag Characters >> |Automatically render character information. |[[Lord Wilmore]] |
-|`note` |<<.tag Notes>> |Automatically render notes related to a tiddler. |[[Lord Wilmore]] |
-|`spell` |<<.tag Spells>> |Automatically render a spell description. |[[Alarm]] |
-|`statblock` |<<.tag Creatures>> |Automatically render a stat block. |[[Goblin]] |
+|`character` |<<.tag Characters >> |Automatically render character information. |[[Captain Wilmore]] |
+|`note` |<<.tag Notes>> |Automatically render notes related to a tiddler. |[[Captain Wilmore]] |
+|`spell` |<<.tag Spells>> |Automatically render a spell description. |[[Apprehending the Arcane Form]] |
+|`statblock` |<<.tag Creatures>> |Automatically render a stat block. |[[Unnatural Swarm]] |
 
-All templates are enabled by default.
-To disable them and use the equivalent macros manually, navigate to the [[plugin settings tiddler|$:/plugins/benwebber/dnd]].
+All templates are enabled by default. To disable them and use the equivalent
+macros manually, navigate to the [[plugin settings tiddler|$:/plugins/justinian/swn]].
 
 ! View Toolbar Buttons
 
-The <<.noop-tool edit-attributes EditAttributes>> tool will automatically appear beside the ''{{$:/language/Buttons/Edit/Caption}}'' ({{$:/core/ui/Buttons/edit}}) tool on any character, creature, or spell tiddler (see ''View Templates'' above).
+The <<.noop-tool edit-attributes EditAttributes>> tool will automatically
+appear beside the ''{{$:/language/Buttons/Edit/Caption}}''
+({{$:/core/ui/Buttons/edit}}) tool on any character, creature, or spell tiddler
+(see ''View Templates'' above).
 
-The <<.tool add-note>> button automatically appears on any non-system tiddler that is ''not'' tagged as a note tiddler.
+The <<.tool add-note>> button automatically appears on any non-system tiddler
+that is ''not'' tagged as a note tiddler.
 
-You can enable or disable these buttons in the [[control panel|$:/ControlPanel]] (''Appearance > Toolbars > View Toolbar'').
+You can enable or disable these buttons in the [[control panel|$:/ControlPanel]]
+(''Appearance > Toolbars > View Toolbar'').

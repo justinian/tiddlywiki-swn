@@ -1,4 +1,4 @@
-title: $:/plugins/benwebber/dnd/language/
+title: $:/plugins/justinian/swn/language/
 
 Ability/STR: Strength
 Ability/DEX: Dexterity
@@ -35,46 +35,16 @@ Check/DC: DC
 
 EditCurrentTiddler: Edit <<sourceTiddler>> attributes
 
-Character/Alignment: Alignment
 Character/Class: Class
 Character/Factions: Factions
 Character/Languages: Languages
 Character/Race: Race
-
-Creature/Size/Tiny: Tiny
-Creature/Size/Small: Small
-Creature/Size/Medium: Medium
-Creature/Size/Large: Large
-Creature/Size/Huge: Huge
-Creature/Size/Gargantuan: Gargantuan
-Creature/Type/Aberration: Aberration
-Creature/Type/Beast: Beast
-Creature/Type/Celestial: Celestial
-Creature/Type/Construct: Construct
-Creature/Type/Dragon: Dragon
-Creature/Type/Elemental: Elemental
-Creature/Type/Fey: Fey
-Creature/Type/Fiend: Fiend
-Creature/Type/Giant: Giant
-Creature/Type/Humanoid: Humanoid
-Creature/Type/Monstrosity: Monstrosity
-Creature/Type/Ooze: Ooze
-Creature/Type/Plant: Plant
-Creature/Type/Undead: Undead
-
-Damage/Type/Acid: acid damage
-Damage/Type/Bludgeoning: bludgeoning damage
-Damage/Type/Cold: cold damage
-Damage/Type/Fire: fire damage
-Damage/Type/Force: force damage
-Damage/Type/Lightning: lightning damage
-Damage/Type/Necrotic: necrotic damage
-Damage/Type/Piercing: piercing damage
-Damage/Type/Poison: poison damage
-Damage/Type/Psychic: psychic damage
-Damage/Type/Radiant: radiant damage
-Damage/Type/Slashing: slashing damage
-Damage/Type/Thunder: thunder damage
+Character/STR: STR
+Character/DEX: DEX
+Character/CON: CON
+Character/INT: INT
+Character/WIS: WIS
+Character/CHA: CHA
 
 Modals/Subtitle: Editing <<tiddler>>
 Modals/Help: //Changes take effect immediately.//
@@ -90,72 +60,58 @@ Settings/RenderCreatures: Automatically render stat blocks for creature tiddlers
 Settings/RenderNotes: Show notes
 Settings/RenderSpells: Automatically render stat blocks for spell tiddlers
 
-Skill/Acrobatics: Acrobatics
-Skill/AnimalHandling: Animal Handling
-Skill/Arcana: Arcana
-Skill/Athletics: Athletics
-Skill/Deception: Deception
-Skill/History: History
-Skill/Insight: Insight
-Skill/Intimidation: Intimidation
-Skill/Investigation: Investigation
-Skill/Medicine: Medicine
-Skill/Nature: Nature
-Skill/Perception: Perception
-Skill/Performance: Performance
-Skill/Persuasion: Persuasion
-Skill/Religion: Religion
-Skill/SleightOfHand: Sleight of Hand
-Skill/Stealth: Stealth
-Skill/Survival: Survival
+Skill/Administer: Administer
+Skill/Connect: Connect
+Skill/Convince: Convince
+Skill/Craft: Craft
+Skill/Exert: Exert
+Skill/Fix: Fix
+Skill/Heal: Heal
+Skill/Know: Know
+Skill/Lead: Lead
+Skill/Magic: Magic
+Skill/Notice: Notice
+Skill/Perform: Perform
+Skill/Pilot: Pilot
+Skill/Pray: Pray
+Skill/Program: Program
+Skill/Punch: Punch
+Skill/Ride: Ride
+Skill/Sail: Sail
+Skill/Shoot: Shoot
+Skill/Sneak: Sneak
+Skill/Stab: Stab
+Skill/Survive: Survive
+Skill/Talk: Talk
+Skill/Trade: Trade
+Skill/Work: Work
 
 Spell/DescriptionFormat/Default: $level$ $school$
-Spell/DescriptionFormat/Ritual: $level$ $school$ (ritual)
-Spell/DescriptionFormat/Cantrip: $School$ cantrip
 Spell/Level: Level
 Spell/Level/1: 1st-level
 Spell/Level/2: 2nd-level
 Spell/Level/3: 3rd-level
 Spell/Level/4: 4th-level
 Spell/Level/5: 5th-level
-Spell/Level/6: 6th-level
-Spell/Level/7: 7th-level
-Spell/Level/8: 8th-level
-Spell/Level/9: 9th-level
 Spell/School: School
-Spell/CastingTime: Casting Time
-Spell/Range: Range
-Spell/Duration: Duration
-Spell/Components: Components
-Spell/School/Abjuration: Abjuration
-Spell/School/Conjuration: Conjuration
-Spell/School/Divination: Divination
-Spell/School/Enchantment: Enchantment
-Spell/School/Evocation: Evocation
-Spell/School/Illusion: Illusion
+Spell/School/HighMagic: High Magic
+Spell/School/Elementalist: Elementalist
 Spell/School/Necromancy: Necromancy
-Spell/School/Transmutation: Transmutation
-Spell/Ritual: Ritual
-Spell/Verbal: V
-Spell/Somatic: S
-Spell/Material: M
 
 StatBlock/Size: Size
 StatBlock/Type: Type
 StatBlock/Tags: Tags
-StatBlock/Alignment: Alignment
-StatBlock/AC: Armour Class
+StatBlock/Attack: Attack
+StatBlock/Damage: Damage
+StatBlock/Shock: Shock
+StatBlock/AC: Armor Class
+StatBlock/HD: Hit Dice
 StatBlock/HP: Hit Points
-StatBlock/Speed: Speed
-StatBlock/STR: STR
-StatBlock/DEX: DEX
-StatBlock/CON: CON
-StatBlock/INT: INT
-StatBlock/WIS: WIS
-StatBlock/CHA: CHA
-StatBlock/SavingThrows: Saving Throws
+StatBlock/Move: Move
 StatBlock/Senses: Senses
 StatBlock/Languages: Languages
+StatBlock/Morale: Morale
+StatBlock/Instinct: Instinct
 StatBlock/Challenge: Challenge
 StatBlock/Saves: Saving Throws
 StatBlock/Skills: Skills
@@ -166,7 +122,6 @@ StatBlock/ConditionImmunities: Condition Immunities
 StatBlock/ConditionResistances: Condition Resistances
 StatBlock/ConditionVulnerabilities: Condition Vulnerabilities
 StatBlock/Action/Damage: damage
-StatBlock/Action/DefaultTarget: one target
 StatBlock/Action/Hit: Hit
 StatBlock/Action/Melee: Melee Weapon Attack
 StatBlock/Action/MeleeOrRanged: Melee or Ranged Weapon Attack
@@ -174,7 +129,8 @@ StatBlock/Action/Or: or
 StatBlock/Action/Plus: plus
 StatBlock/Action/Range: range
 StatBlock/Action/Ranged: Ranged Weapon Attack
-StatBlock/Action/Reach: reach
+StatBlock/Action/Shock: shock
+StatBlock/Action/NoShock: no shock
 StatBlock/Action/ToHit: to hit
 
 XP: XP

@@ -1,14 +1,11 @@
 import {Factory} from "rosie";
 
-import {StatBlock} from "../../src/files/dnd";
+import {StatBlock} from "../../src/files/swn";
 
 
 /* tslint:disable:object-literal-sort-keys */
 export default new Factory()
   .attrs({
-    size: "medium",
-    type: "humanoid",
-    alignment: "any alignment",
     ac: 10,
     hp: "1d8",
     speed: "30 ft.",
@@ -18,9 +15,10 @@ export default new Factory()
     int: 10,
     wis: 10,
     cha: 10,
+    morale: 7,
+    instinct: 12,
     senses: "passive Perception 10",
     languages: "any one language (usually Common)",
-    challenge: "0 10",
     tags: "any race",
   })
   .after((factory) => {
@@ -28,9 +26,6 @@ export default new Factory()
     // constructor must accept an object instead of positional arguments.
     // Pass the factory values to the StatBlock constructor explicitly.
     return new StatBlock(
-      factory.size,
-      factory.type,
-      factory.alignment,
       factory.ac,
       factory.hp,
       factory.speed,
@@ -42,16 +37,11 @@ export default new Factory()
       factory.cha,
       factory.senses,
       factory.languages,
-      factory.challenge,
       factory.tags,
       factory.saves,
       factory.skills,
-      factory.dimm,
-      factory.dres,
-      factory.dvul,
-      factory.cimm,
-      factory.cres,
-      factory.cvul,
+      factory.morale,
+      factory.instinct,
     );
   });
 /* tslint:enable */

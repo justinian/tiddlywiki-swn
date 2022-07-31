@@ -1,7 +1,7 @@
-# tiddlywiki-dnd
+# tiddlywiki-swn
 
-[![CircleCI](https://img.shields.io/circleci/project/github/benwebber/tiddlywiki-dnd/master.svg)](https://circleci.com/gh/benwebber/tiddlywiki-dnd)
-[![Codecov](https://img.shields.io/codecov/c/github/benwebber/tiddlywiki-dnd.svg)](https://codecov.io/gh/benwebber/tiddlywiki-dnd)
+[![CircleCI](https://img.shields.io/circleci/project/github/justinian/tiddlywiki-swn/master.svg)](https://circleci.com/gh/justinian/tiddlywiki-swn)
+[![Codecov](https://img.shields.io/codecov/c/github/justinian/tiddlywiki-swn.svg)](https://codecov.io/gh/justinian/tiddlywiki-swn)
 
 Manage *Dungeons & Dragons* campaigns with [TiddlyWiki](https://tiddlywiki.com/).
 
@@ -15,7 +15,7 @@ Manage *Dungeons & Dragons* campaigns with [TiddlyWiki](https://tiddlywiki.com/)
 
 Check out the plugin page at:
 
-https://benwebber.github.io/tiddlywiki-dnd/
+https://justinian.github.io/tiddlywiki-swn/
 
 ## License
 

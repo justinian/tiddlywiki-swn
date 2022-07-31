@@ -1,7 +1,7 @@
-import {Spell} from "$:/plugins/benwebber/dnd/dnd.js";
+import {Spell} from "$:/plugins/justinian/swn/swn.js";
 
 
-export const name = "dnd.spellblock";
+export const name = "swn.spellblock";
 
 export const params = [
   {name: "level"},

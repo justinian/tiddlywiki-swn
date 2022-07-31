@@ -7,7 +7,7 @@
       "fields": {
         "title": {
           "source": "filename",
-          "prefix": "$:/plugins/benwebber/dnd/"
+          "prefix": "$:/plugins/justinian/swn/"
         },
         "type": "application/javascript",
         "module-type": "library"

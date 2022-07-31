@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "build/plugins/dnd",
+    "outDir": "build/plugins/swn",
     "target": "es5",
     "baseUrl": ".",
     "paths": {
-      "$:/plugins/benwebber/dnd/*": ["src/files/*"]
+      "$:/plugins/justinian/swn/*": ["src/files/*"]
     },
     "lib": [
       "es2015"

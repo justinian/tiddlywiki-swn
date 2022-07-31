@@ -1,6 +1,6 @@
-import {average} from "$:/plugins/benwebber/dnd/dnd.js";
+import {average} from "$:/plugins/justinian/swn/swn.js";
 
-export const name = "dnd.average";
+export const name = "swn.average";
 
 export const params = [{name: "expr"}];
 

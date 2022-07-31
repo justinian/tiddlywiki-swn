@@ -1,11 +1,11 @@
 declare const $tw: any;
 
-export const name = "dnd._lingo";
+export const name = "swn._lingo";
 export const params = [
   {name: "title"},
 ];
 export function run(this: any, title: string): string {
-  const plugin = "benwebber/dnd";
+  const plugin = "justinian/swn";
   const languageTitle = this.getVariable("languageTitle");
   const tiddlerTitle = `$:/plugins/${plugin}/languages/${languageTitle}/${title}`;
   if (this.wiki.isShadowTiddler(tiddlerTitle)) {

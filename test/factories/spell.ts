@@ -1,6 +1,6 @@
 import {Factory} from "rosie";
 
-import {Spell} from "../../src/files/dnd";
+import {Spell} from "../../src/files/swn";
 
 /* tslint:disable:object-literal-sort-keys */
 export default new Factory()

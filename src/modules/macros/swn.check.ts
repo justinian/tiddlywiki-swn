@@ -1,6 +1,6 @@
-import {check} from "$:/plugins/benwebber/dnd/dnd.js";
+import {check} from "$:/plugins/justinian/swn/swn.js";
 
-export const name = "dnd.check";
+export const name = "swn.check";
 
 export const params = [
   {name: "ability"},

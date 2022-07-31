@@ -1,22 +1,22 @@
-title: $:/plugins/benwebber/dnd/ui/Buttons/new-creature
+title: $:/plugins/justinian/swn/ui/Buttons/new-creature
 tags: $:/tags/PageControls
-caption: {{$:/plugins/benwebber/dnd/images/new-creature}} <<dnd._lingo Buttons/NewCreature/Text>>
-description: <<dnd._lingo Buttons/NewCreature/Tooltip>>
+caption: {{$:/plugins/justinian/swn/images/new-creature}} <<swn._lingo Buttons/NewCreature/Text>>
+description: <<swn._lingo Buttons/NewCreature/Tooltip>>
 
 \define actions()
 <$action-sendmessage
   $message="tm-new-tiddler"
   title=<<title>>
-  tags={{$:/plugins/benwebber/dnd/config/Tags/Creatures}}
+  tags={{$:/plugins/justinian/swn/config/Tags/Creatures}}
 />
 \end
 
-<$wikify name="text" text=<<dnd._lingo Buttons/NewCreature/Text>>>
-<$wikify name="title" text=<<dnd._lingo Buttons/NewCreature/Title>>>
-<$wikify name="tooltip" text=<<dnd._lingo Buttons/NewCreature/Tooltip>>>
+<$wikify name="text" text=<<swn._lingo Buttons/NewCreature/Text>>>
+<$wikify name="title" text=<<swn._lingo Buttons/NewCreature/Title>>>
+<$wikify name="tooltip" text=<<swn._lingo Buttons/NewCreature/Tooltip>>>
 <$button actions=<<actions>> class=<<tv-config-toolbar-class>> tooltip=<<tooltip>>>
 <$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
-{{$:/plugins/benwebber/dnd/images/new-creature}}
+{{$:/plugins/justinian/swn/images/new-creature}}
 </$list>
 <$list filter="[<tv-config-toolbar-text>prefix[yes]]">
 <span class="tc-btn-text"><$text text=<<text>>/></span>

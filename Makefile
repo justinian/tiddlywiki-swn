@@ -13,9 +13,9 @@ clean:
 index.html: $(SOURCES)
 	tsc --version
 	tiddlywiki --version
-	mkdir -p build/plugins/dnd
+	mkdir -p build/plugins/swn
 	cp -r doc/* build/
-	cp -r src/* build/plugins/dnd/
+	cp -r src/* build/plugins/swn/
 	tsc
 	tiddlywiki ./build --verbose --build
 

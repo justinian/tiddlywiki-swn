@@ -1,0 +1,12 @@
+title: Unnatural Swarm
+tags: Creatures
+swn.creature.ac: 10
+swn.creature.hd: 4
+swn.creature.attack: +6 x3
+swn.creature.damage: 1d6
+swn.creature.shock: 1/-
+swn.creature.move: 30'
+swn.creature.morale: 10
+swn.creature.instinct: 5
+swn.creature.skills: +1
+swn.creature.saves: 13+

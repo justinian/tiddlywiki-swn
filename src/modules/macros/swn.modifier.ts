@@ -1,6 +1,6 @@
-import {modifier} from "$:/plugins/benwebber/dnd/dnd.js";
+import {modifier} from "$:/plugins/justinian/swn/swn.js";
 
-export const name = "dnd.modifier";
+export const name = "swn.modifier";
 
 export const params = [{name: "score"}];
 

@@ -1,10 +1,10 @@
 {
-  "name": "tiddlywiki-dnd",
+  "name": "tiddlywiki-swn",
   "version": "1.2.1",
-  "description": "Manage Dungeons & Dragons campaigns with TiddlyWiki.",
+  "description": "Manage Stars Without Number or Worlds Without Number campaigns with TiddlyWiki.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benwebber/tiddlywiki-dnd.git"
+    "url": "https://github.com/justinian/tiddlywiki-swn.git"
   },
   "scripts": {
     "build": "make",
@@ -22,5 +22,8 @@
     "ts-jest": "^26.5.1",
     "tslint": "^6.1.3",
     "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "yarn": "^1.22.19"
   }
 }

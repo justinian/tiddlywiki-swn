@@ -1,5 +1,5 @@
-title: $:/plugins/benwebber/dnd/github-fork-ribbon
+title: $:/plugins/justinian/swn/github-fork-ribbon
 tags: $:/tags/PageControls
 
-<div class="github-fork-ribbon-wrapper right"><div class="github-fork-ribbon"><a href="https://github.com/benwebber/tiddlywiki-dnd">Fork me on ~GitHub</a></div>
+<div class="github-fork-ribbon-wrapper right"><div class="github-fork-ribbon"><a href="https://github.com/justinian/tiddlywiki-swn">Fork me on ~GitHub</a></div>
 </div>

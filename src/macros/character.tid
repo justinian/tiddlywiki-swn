@@ -1,6 +1,6 @@
-title: $:/plugins/benwebber/dnd/macros/character
+title: $:/plugins/justinian/swn/macros/character
 tags: $:/tags/Macro
 
-\define dnd.character()
-{{||$:/plugins/benwebber/dnd/templates/dnd.character}}
+\define swn.character()
+{{||$:/plugins/justinian/swn/templates/swn.character}}
 \end

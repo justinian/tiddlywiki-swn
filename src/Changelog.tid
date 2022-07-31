@@ -1,11 +1,11 @@
-title: $:/plugins/benwebber/dnd/Changelog
+title: $:/plugins/justinian/swn/Changelog
 
-\define unreleased() [[Unreleased|https://github.com/benwebber/tiddlywiki-dnd/compare/v$(latest)$..HEAD]]
-\define issue(number) [[#$number$|https://github.com/benwebber/tiddlywiki-dnd/issues/$number$]]
-\define release(version) [[$version$|https://github.com/benwebber/tiddlywiki-dnd/releases/tag/v$version$]]
+\define unreleased() [[Unreleased|https://github.com/justinian/tiddlywiki-swn/compare/v$(latest)$..HEAD]]
+\define issue(number) [[#$number$|https://github.com/justinian/tiddlywiki-swn/issues/$number$]]
+\define release(version) [[$version$|https://github.com/justinian/tiddlywiki-swn/releases/tag/v$version$]]
 \define @(name) [[@$name$|https://github.com/$name$]]
 
-<$vars latest={{$:/plugins/benwebber/dnd!!version}}>
+<$vars latest={{$:/plugins/justinian/swn!!version}}>
 
 ! <<unreleased>>
 </$vars>
@@ -20,9 +20,9 @@ title: $:/plugins/benwebber/dnd/Changelog
 
 !! Added
 
-* Added `dnd.character` macro and view template to typeset character information (class, race, alignment, languages, and factions).
+* Added `swn.character` macro and view template to typeset character information (class, race, alignment, languages, and factions).
 * Added note tool to record extra notes associated with main tiddlers.
-* Added tool to export filtered "player edition" of the wiki. This edition excludes any tiddlers that are not explicitly tagged <$tiddler tiddler={{$:/plugins/benwebber/dnd/config/Tags/PlayerEdition}}>{{||$:/core/ui/TagTemplate}}</$tiddler>.
+* Added tool to export filtered "player edition" of the wiki. This edition excludes any tiddlers that are not explicitly tagged <$tiddler tiddler={{$:/plugins/justinian/swn/config/Tags/PlayerEdition}}>{{||$:/core/ui/TagTemplate}}</$tiddler>.
 
 !! Changed
 
@@ -39,8 +39,8 @@ title: $:/plugins/benwebber/dnd/Changelog
 
 !! Added
 
-* Added `dnd.attack` macro to typeset creature melee and ranged attacks.
-* Added `dnd.modifier` macro to calculate ability score modifiers independently.
+* Added `swn.attack` macro to typeset creature melee and ranged attacks.
+* Added `swn.modifier` macro to calculate ability score modifiers independently.
 
 !! Changed
 
@@ -49,12 +49,12 @@ title: $:/plugins/benwebber/dnd/Changelog
 
 !! Deprecated
 
-* Deprecated `dnd.dspell` and `dnd.fspell` in favour of a single template that determines the input tiddler's type. These templates will be removed in 2.0.0.
-* Deprecated `dnd.dstatblock` and `dnd.fstatblock` in favour of a single template that determines the input tiddler's type. These templates will be removed in 2.0.0.
+* Deprecated `swn.dspell` and `swn.fspell` in favour of a single template that determines the input tiddler's type. These templates will be removed in 2.0.0.
+* Deprecated `swn.dstatblock` and `swn.fstatblock` in favour of a single template that determines the input tiddler's type. These templates will be removed in 2.0.0.
 
 !! Fixed
 
-* `dnd.check` macro supports skills with spaces in the name (Animal Handling and Sleight of Hand).
+* `swn.check` macro supports skills with spaces in the name (Animal Handling and Sleight of Hand).
 * Macros which expect boolean values now only consider the string "true" true (<<issue 5>>).
 
 ! <<release 1.0.0>> (2018-08-31)
@@ -78,7 +78,7 @@ title: $:/plugins/benwebber/dnd/Changelog
 !! Fixed
 
 * Use proper minus sign for ability/roll modifiers.
-* `dnd.average`: Pass through unrecognized roll expressions (support arbitrary values).
+* `swn.average`: Pass through unrecognized roll expressions (support arbitrary values).
 
 ! <<release 0.1.0>> (2018-07-31)
 

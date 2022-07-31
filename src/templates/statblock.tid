@@ -1,33 +1,22 @@
-title: $:/plugins/benwebber/dnd/templates/dnd.statblock
+title: $:/plugins/justinian/swn/templates/swn.statblock
 
 \define field-statblock()
 
 <$macrocall
-  $name="dnd.statblock"
-  size={{!!dnd.creature.size}}
-  type={{!!dnd.creature.type}}
-  tags={{!!dnd.creature.tags}}
-  alignment={{!!dnd.creature.alignment}}
-  ac={{!!dnd.creature.ac}}
-  hp={{!!dnd.creature.hp}}
-  speed={{!!dnd.creature.speed}}
-  str={{!!dnd.creature.str}}
-  dex={{!!dnd.creature.dex}}
-  con={{!!dnd.creature.con}}
-  int={{!!dnd.creature.int}}
-  wis={{!!dnd.creature.wis}}
-  cha={{!!dnd.creature.cha}}
-  saves={{!!dnd.creature.saves}}
-  skills={{!!dnd.creature.skills}}
-  dimm={{!!dnd.creature.dimm}}
-  dres={{!!dnd.creature.dres}}
-  dvul={{!!dnd.creature.dvul}}
-  cimm={{!!dnd.creature.cimm}}
-  cres={{!!dnd.creature.cres}}
-  cvul={{!!dnd.creature.cvul}}
-  senses={{!!dnd.creature.senses}}
-  languages={{!!dnd.creature.languages}}
-  challenge={{!!dnd.creature.challenge}}
+  $name="swn.statblock"
+  hd={{!!swn.creature.hd}}
+  ac={{!!swn.creature.ac}}
+  attack={{!!swn.creature.attack}}
+  damage={{!!swn.creature.damage}}
+  shock={{!!swn.creature.shock}}
+  move={{!!swn.creature.move}}
+  morale={{!!swn.creature.morale}}
+  instinct={{!!swn.creature.instinct}}
+  skills={{!!swn.creature.skills}}
+  saves={{!!swn.creature.saves}}
+  tags={{!!swn.creature.tags}}
+  senses={{!!swn.creature.senses}}
+  languages={{!!swn.creature.languages}}
 />
 
 \end
@@ -35,31 +24,20 @@ title: $:/plugins/benwebber/dnd/templates/dnd.statblock
 \define data-statblock()
 
 <$macrocall
-  $name="dnd.statblock"
-  size={{##size}}
-  type={{##type}}
-  tags={{##tags}}
-  alignment={{##alignment}}
+  $name="swn.statblock"
+  hd={{##hd}}
   ac={{##ac}}
-  hp={{##hp}}
-  speed={{##speed}}
-  str={{##str}}
-  dex={{##dex}}
-  con={{##con}}
-  int={{##int}}
-  wis={{##wis}}
-  cha={{##cha}}
-  saves={{##saves}}
+  attack={{##attack}}
+  damage={{##damage}}
+  shock={{##shock}}
+  move={{##move}}
+  morale={{##morale}}
+  instinct={{##instinct}}
   skills={{##skills}}
-  dimm={{##dimm}}
-  dres={{##dres}}
-  dvul={{##dvul}}
-  cimm={{##cimm}}
-  cres={{##cres}}
-  cvul={{##cvul}}
+  saves={{##saves}}
+  tags={{##tags}}
   senses={{##senses}}
   languages={{##languages}}
-  challenge={{##challenge}}
 />
 
 \end

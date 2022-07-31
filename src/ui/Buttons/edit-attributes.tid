@@ -1,13 +1,13 @@
-title: $:/plugins/benwebber/dnd/ui/Buttons/edit-attributes
+title: $:/plugins/justinian/swn/ui/Buttons/edit-attributes
 tags: $:/tags/ViewToolbar
 list-after: $:/core/ui/Buttons/edit
-caption: {{$:/plugins/benwebber/dnd/images/edit-attributes}} <<dnd._lingo Buttons/EditAttributes/Text>>
-description: <<dnd._lingo Buttons/EditAttributes/Tooltip>>
+caption: {{$:/plugins/justinian/swn/images/edit-attributes}} <<swn._lingo Buttons/EditAttributes/Text>>
+description: <<swn._lingo Buttons/EditAttributes/Tooltip>>
 
 \whitespace trim
 
 \define showButtonFilter()
-[<currentTiddler>tag{$:/plugins/benwebber/dnd/config/Tags/Characters}] [<currentTiddler>tag{$:/plugins/benwebber/dnd/config/Tags/Creatures}] [<currentTiddler>tag{$:/plugins/benwebber/dnd/config/Tags/Spells}]
+[<currentTiddler>tag{$:/plugins/justinian/swn/config/Tags/Characters}] [<currentTiddler>tag{$:/plugins/justinian/swn/config/Tags/Creatures}] [<currentTiddler>tag{$:/plugins/justinian/swn/config/Tags/Spells}]
 \end
 
 \define actions()
@@ -23,18 +23,18 @@ will be empty. Delete empty fields.
 <!-- Open editor form. -->
 <$action-sendmessage
   $message="tm-modal"
-  $param="$:/plugins/benwebber/dnd/ui/Modals/EditAttributes"
+  $param="$:/plugins/justinian/swn/ui/Modals/EditAttributes"
   tiddler="$(currentTiddler)$"
 />
 \end
 
 <$list filter=<<showButtonFilter>>>
-<$wikify name="text" text=<<dnd._lingo Buttons/EditAttributes/Text>>>
-<$wikify name="title" text=<<dnd._lingo Buttons/EditAttributes/Title>>>
-<$wikify name="tooltip" text=<<dnd._lingo Buttons/EditAttributes/Tooltip>>>
+<$wikify name="text" text=<<swn._lingo Buttons/EditAttributes/Text>>>
+<$wikify name="title" text=<<swn._lingo Buttons/EditAttributes/Title>>>
+<$wikify name="tooltip" text=<<swn._lingo Buttons/EditAttributes/Tooltip>>>
 <$button actions=<<actions>> tooltip=<<tooltip>> aria-label=<<text>> class=<<tv-config-toolbar-class>>>
 <$list filter="[<tv-config-toolbar-icons>prefix[yes]]">
-{{$:/plugins/benwebber/dnd/images/edit-attributes}}
+{{$:/plugins/justinian/swn/images/edit-attributes}}
 </$list>
 <$list filter="[<tv-config-toolbar-text>prefix[yes]]">
 <span class="tc-btn-text"><$text text=<<text>>/></span>
