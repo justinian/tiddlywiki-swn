@@ -10,76 +10,7 @@ title: $:/plugins/justinian/swn/Changelog
 ! <<unreleased>>
 </$vars>
 
-! <<release 1.2.1>> (2021-02-18)
+! <<release 1.0.0>> (2022-07-30)
 
-!! Fixed
-
-* Fixed incompatibility with ~KaTeX plugin that prevented spell descriptions from rendering correctly (<<issue 8>>). Thanks to <<@ lbhgh>> for reporting this bug.
-
-! <<release 1.2.0>> (2021-02-17)
-
-!! Added
-
-* Added `swn.character` macro and view template to typeset character information (class, race, alignment, languages, and factions).
-* Added note tool to record extra notes associated with main tiddlers.
-* Added tool to export filtered "player edition" of the wiki. This edition excludes any tiddlers that are not explicitly tagged <$tiddler tiddler={{$:/plugins/justinian/swn/config/Tags/PlayerEdition}}>{{||$:/core/ui/TagTemplate}}</$tiddler>.
-
-!! Changed
-
-* Changed ''New Creature'' icon to a dragon.
-* Moved buttons to edit game tiddler attributes to tiddler toolbar.
-* Embedded attribute form directly in game tiddler edit template.
-
-!! Fixed
-
-* Fixed display of plugin buttons in toolbar lists.
-* Fixed display of qualified armour class (e.g., `15 (breastplate)`).
-
-! <<release 1.1.0>> (2019-02-15)
-
-!! Added
-
-* Added `swn.attack` macro to typeset creature melee and ranged attacks.
-* Added `swn.modifier` macro to calculate ability score modifiers independently.
-
-!! Changed
-
-* Make creature and spell tags configurable (<<issue 3>>).
-* Refactored localization code to work with core language switcher. Nearly all user-facing strings use this framework now (<<issue 2>>).
-
-!! Deprecated
-
-* Deprecated `swn.dspell` and `swn.fspell` in favour of a single template that determines the input tiddler's type. These templates will be removed in 2.0.0.
-* Deprecated `swn.dstatblock` and `swn.fstatblock` in favour of a single template that determines the input tiddler's type. These templates will be removed in 2.0.0.
-
-!! Fixed
-
-* `swn.check` macro supports skills with spaces in the name (Animal Handling and Sleight of Hand).
-* Macros which expect boolean values now only consider the string "true" true (<<issue 5>>).
-
-! <<release 1.0.0>> (2018-08-31)
-
-!! Added
-
-* Added English (UK) and English (US) translations.
-* Added D&D icon from Font Awesome to plugin info block.
-* Set up Jest test harness, Travis CI, and Codecov.
-* Added creature view template.
-* Added spell macros, templates, and view templates.
-* Added toolbar buttons to create new creatures and spells.
-* Added modal update form for creatures and spells.
-
-!! Changed
-
-* Moved macro functionality to testable library.
-* Ported to ~TypeScript.
-* Store creature attributes as tiddler field values by default.
-
-!! Fixed
-
-* Use proper minus sign for ability/roll modifiers.
-* `swn.average`: Pass through unrecognized roll expressions (support arbitrary values).
-
-! <<release 0.1.0>> (2018-07-31)
-
-Initial release.
+First forked from <<@ benwebber>>'s tiddlywiki-dnd version 1.2.1 and updated
+for SWN and WWN.

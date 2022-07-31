@@ -2,7 +2,7 @@
   "title": "$:/plugins/justinian/swn",
   "description": "Stars/Worlds Without Number campaign tools",
   "author": "Ben Webber & Justin C Miller",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "core-version": ">=5.0.0",
   "source": "https://github.com/justinian/tiddlywiki-swn",
   "plugin-type": "plugin",
