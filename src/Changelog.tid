@@ -10,6 +10,10 @@ title: $:/plugins/justinian/swn/Changelog
 ! <<unreleased>>
 </$vars>
 
+! <<release 1.1.0>> (2022-08-06)
+
+* Added missing attack/damage/shock values to creature stat blocks.
+
 ! <<release 1.0.0>> (2022-07-30)
 
 First forked from <<@ benwebber>>'s tiddlywiki-dnd version 1.2.1 and updated
