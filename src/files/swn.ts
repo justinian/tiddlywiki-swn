@@ -201,17 +201,19 @@ export class StatBlock {
     let fields = [
       {caption: "StatBlock/AC", value: this.ac},
       {caption: "StatBlock/HD", value: hp},
-      {caption: "StatBlock/Move", value: this.move},
+      {caption: "StatBlock/Attack", value: this.attack},
+      {caption: "StatBlock/Damage", value: average(this.damage)},
+      {caption: "StatBlock/Shock", value: this.shock},
     ];
-    output = output.concat(renderFields(fields, true));
+    output = output.concat(renderFields(fields, false));
     output.push("");
-    output.push("---");
 
     fields = [
       {caption: "StatBlock/Saves", value: this.saves},
       {caption: "StatBlock/Morale", value: this.morale},
       {caption: "StatBlock/Instinct", value: this.instinct},
       {caption: "StatBlock/Skills", value: this.skills},
+      {caption: "StatBlock/Move", value: this.move},
     ];
     output = output.concat(renderFields(fields, false));
 
@@ -219,7 +221,7 @@ export class StatBlock {
       {caption: "StatBlock/Senses", value: this.senses},
       {caption: "StatBlock/Languages", value: this.languages},
     ];
-    output = output.concat(renderFields(fields, true));
+    output = output.concat(renderFields(fields, false));
     output.push("");
     output.push("---");
 
