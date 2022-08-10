@@ -59,6 +59,7 @@ Settings/RenderCharacters: Automatically render character frontmatter for charac
 Settings/RenderCreatures: Automatically render stat blocks for creature tiddlers
 Settings/RenderNotes: Show notes
 Settings/RenderSpells: Automatically render stat blocks for spell tiddlers
+Settings/PlayerEditionFilename: Name for player edition file
 
 Skill/Administer: Administer
 Skill/Connect: Connect

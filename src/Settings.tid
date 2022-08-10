@@ -19,3 +19,4 @@ icon: $:/core/images/options-button
 |<<swn._lingo Settings/RenderNotes>> | <<render-boolean "ViewTemplates/Notes">> |
 |<<swn._lingo Settings/RenderCreatures>> | <<render-boolean "ViewTemplates/StatBlock">> |
 |<<swn._lingo Settings/RenderSpells>> | <<render-boolean "ViewTemplates/Spell">> |
+|<<swn._lingo Settings/PlayerEditionFilename>> |<<edit-setting "PlayerEditionFilename">> |

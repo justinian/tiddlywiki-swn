@@ -10,6 +10,10 @@ title: $:/plugins/justinian/swn/Changelog
 ! <<unreleased>>
 </$vars>
 
+! <<release 1.2.0>> (2022-08-09)
+
+* Enable setting of player edition filename as a config value
+
 ! <<release 1.1.0>> (2022-08-06)
 
 * Added missing attack/damage/shock values to creature stat blocks.

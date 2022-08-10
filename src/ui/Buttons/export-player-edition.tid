@@ -4,13 +4,15 @@ caption: {{$:/plugins/justinian/swn/images/export-player-edition}} <<swn._lingo 
 description: <<swn._lingo Buttons/ExportPlayerEdition/Tooltip>>
 
 \define actions()
+<$set name="playerEditionFilename" value={{$:/plugins/justinian/swn/config/PlayerEditionFilename}}>
 <$action-setfield $tiddler="$:/plugins/justinian/swn/config/PlayerEdition" text="true"/>
 <$action-sendmessage
   $message="tm-download-file"
   $param="$:/plugins/justinian/swn/PlayerEdition"
-  filename="public.html"
+  filename=<<playerEditionFilename>>
 />
 <$action-setfield $tiddler="$:/plugins/justinian/swn/config/PlayerEdition" text="false"/>
+</$set>
 \end
 
 <$reveal type="nomatch" state="$:/plugins/justinian/swn/config/PlayerEdition" text="true">
