@@ -42,7 +42,7 @@ subtitle: <<swn._lingo Modals/Subtitle>>
 
 \define spell-select-school()
 <$select tiddler=<<tiddler>> field="swn.spell.school">
-  <option value="highmagic"><<swn._lingo Spell/School/HighMagic>></option>
+  <option value="highmagic"><<swn._lingo Spell/School/Highmagic>></option>
   <option value="elementalist"><<swn._lingo Spell/School/Elementalist>></option>
   <option value="necromancy"><<swn._lingo Spell/School/Necromancy>></option>
 </$select>

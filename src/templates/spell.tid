@@ -6,13 +6,6 @@ title: $:/plugins/justinian/swn/templates/swn.spell
   $name="swn.spellblock"
   level={{!!swn.spell.level}}
   school={{!!swn.spell.school}}
-  cast={{!!swn.spell.cast}}
-  ritual={{!!swn.spell.ritual}}
-  range={{!!swn.spell.range}}
-  verbal={{!!swn.spell.verbal}}
-  somatic={{!!swn.spell.somatic}}
-  material={{!!swn.spell.material}}
-  duration={{!!swn.spell.duration}}
 />
 
 \end
@@ -23,14 +16,6 @@ title: $:/plugins/justinian/swn/templates/swn.spell
   $name="swn.spellblock"
   level={{##level}}
   school={{##school}}
-  cast={{##cast}}
-  ritual={{##ritual}}
-  range={{##range}}
-  components={{##components}}
-  verbal={{##verbal}}
-  somatic={{##somatic}}
-  material={{##material}}
-  duration={{##duration}}
 />
 
 \end

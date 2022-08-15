@@ -121,46 +121,14 @@ export class Spell {
   constructor(
     public level: number,
     public school: string,
-    public cast: string,
-    public ritual: boolean,
-    public range: string,
-    public verbal: boolean,
-    public somatic: boolean,
-    public material: string,
-    public duration: string,
   ) {}
-
-  get isCantrip(): boolean {
-    return !isNaN(this.level) && this.level === 0;
-  }
 
   public render(): string {
     const descriptionLevel = Number.isNaN(this.level) ? "" : this.level;
     let output = [
-      `//<<swn._spellDescription level:"${descriptionLevel}" school:"${this.school}" ritual:"${this.ritual}">>//`,
+      `//<<swn._spellDescription level:"${descriptionLevel}" school:"${this.school}">>//`,
       "",
     ];
-
-    const componentFragments: string[] = [];
-    if (this.verbal) {
-      componentFragments.push("<<swn._lingo Spell/Verbal>>");
-    }
-    if (this.somatic) {
-      componentFragments.push("<<swn._lingo Spell/Somatic>>");
-    }
-    if (this.material) {
-      componentFragments.push(`<<swn._lingo Spell/Material>> (${this.material})`);
-    }
-    const components = componentFragments.join(", ");
-
-    const fields = [
-      {caption: "Spell/CastingTime", value: this.cast},
-      {caption: "Spell/Range", value: this.range},
-      {caption: "Spell/Components", value: components},
-      {caption: "Spell/Duration", value: this.duration},
-    ];
-    output = output.concat(renderFields(fields, true));
-    output.push("");
 
     return output.join("\n");
   }
